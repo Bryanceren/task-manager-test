@@ -1,7 +1,12 @@
 import React from "react";
+import PageLayout from "../layouts/PageLayout";
 
 const NotFound = () => {
-  return <div>NotFound</div>;
+  return (
+    <PageLayout>
+      <div>NotFound</div>
+    </PageLayout>
+  );
 };
 
 export default NotFound;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import { ReactComponent as RavnLogo } from "../../assets/icons/Ravn-Black.svg";
-import { ReactComponent as DashboardIcon } from "../../assets/icons/SideBar-Dash.svg";
-import { ReactComponent as TasksIcon } from "../../assets/icons/SideBar-Task.svg";
+import { ReactComponent as RavnLogo } from "../assets/icons/Ravn-Black.svg";
+import { ReactComponent as DashboardIcon } from "../assets/icons/SideBar-Dash.svg";
+import { ReactComponent as TasksIcon } from "../assets/icons/SideBar-Task.svg";
 
 const MainWrapper = styled.div`
   border-radius: 24px;
@@ -21,11 +21,11 @@ const Tab = styled.button`
   padding: 16px 20px;
   cursor: pointer;
   &:hover {
-    color: #da584b;
-    fill: #da584b;
+    color: ${(props) => props.theme.primary};
+    fill: ${(props) => props.theme.primary};
   }
-  color: #94979a;
-  fill: #94979a;
+  color: ${(props) => props.theme.neutral1};
+  fill: ${(props) => props.theme.neutral1};
   width: 100%;
   background: transparent;
   border: none;
@@ -47,9 +47,9 @@ const Tab = styled.button`
           transparent,
           rgb(218, 88, 75, 0.2)
         );
-        color: #da584b;
-        fill: #da584b;
-        border-right: #da584b solid 4px;
+        color: ${(props) => props.theme.primary};
+        fill: ${(props) => props.theme.primary};
+        border-right: ${(props) => props.theme.primary} solid 4px;
       `;
     }
   }};
