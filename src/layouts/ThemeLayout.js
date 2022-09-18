@@ -9,8 +9,8 @@ const theme = {
   bgMain: "#222528",
   bgLight: "#2C2F33",
 };
-const PageLayout = ({ children }) => {
+const ThemeLayout = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
-export default PageLayout;
+export default ThemeLayout;

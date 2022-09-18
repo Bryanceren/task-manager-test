@@ -8,8 +8,12 @@ const MainWrapper = styled.div`
   border-radius: 24px;
   padding-top: 14px;
   min-height: 836px;
-  width: 232px;
-  background-color: #2c2f33;
+  min-width: 232px;
+  display: none;
+  @media only screen and (min-width: 769px) {
+    display: block;
+  }
+  background-color: ${(props) => props.theme.bgLight};
 `;
 const LogoWrapper = styled.div`
   text-align: center;
@@ -31,7 +35,6 @@ const Tab = styled.button`
   border: none;
   display: flex;
   align-items: center;
-  font-family: sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -55,8 +58,8 @@ const Tab = styled.button`
   }};
 `;
 
-const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState(0);
+const SideBar = () => {
+  const [activeTab, setActiveTab] = useState(1);
   return (
     <MainWrapper>
       <LogoWrapper>
@@ -88,4 +91,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
