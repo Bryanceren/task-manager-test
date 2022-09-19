@@ -28,11 +28,11 @@ This application's functionality is about a task management site, where you can 
 tasks in order to keep you workspace organized and clean.
 
 ## Technologies and Libraries used
-"graphql": "^16.6.0", For querying with apollo client
-"moment": "^2.29.4", Useful for date formatting 
-"react-datepicker": "^4.8.0", Date Picker that Provided a better friendly experience in development
-"@apollo/client": "^3.6.9", Used for querying backend API and storing data in cache
-"styled-components": "^5.3.5", Used for the entire application interface with css
+"graphql": "^16.6.0", For querying with apollo client \
+"moment": "^2.29.4", Useful for date formatting \
+"react-datepicker": "^4.8.0", Date Picker that Provided a better friendly experience in development \
+"@apollo/client": "^3.6.9", Used for querying backend API and storing data in cache \
+"styled-components": "^5.3.5", Used for the entire application interface with css \
 
 ## Screenshots of running application
 ![image](https://user-images.githubusercontent.com/37248707/191132981-bac6ddc9-c96c-4b4d-a45c-d33f7c94657f.png)
