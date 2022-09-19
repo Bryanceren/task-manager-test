@@ -1,8 +1,18 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+const Button = ({ variant, children, ...rest }) => {
+  return (
+    <ButtonComponent variant={variant} {...rest}>
+      {children}
+    </ButtonComponent>
+  );
+};
+
 const ButtonComponent = styled.button`
   border-radius: 8px;
+  display: flex;
+  gap: 10px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -30,15 +40,12 @@ const ButtonComponent = styled.button`
       default:
         return css`
           padding: 8px;
-          background-color: ${props.theme.primary};
+          background-color: ${props.bgColor || props.theme.primary};
           color: white;
           fill: white;
         `;
     }
   }}
 `;
-const Button = ({ variant, children }) => {
-  return <ButtonComponent variant={variant}>{children}</ButtonComponent>;
-};
 
 export default Button;

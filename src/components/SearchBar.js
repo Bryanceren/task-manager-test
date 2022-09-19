@@ -3,6 +3,22 @@ import styled from "styled-components";
 import { ReactComponent as SearchIcon } from "../assets/icons/SearchBar-Search.svg";
 import { ReactComponent as NotificationIcon } from "../assets/icons/SearchBar-Notification.svg";
 import Avatar from "../assets/images/Avatar.png";
+
+const SearchBar = () => {
+  return (
+    <MainWrapper>
+      <div>
+        <SearchIcon />
+        <SearchInput />
+      </div>
+      <div>
+        <NotificationIcon />
+        <img src={Avatar} alt="profileAvatar" />
+      </div>
+    </MainWrapper>
+  );
+};
+
 const MainWrapper = styled.div`
   border-radius: 16px;
   padding-left: 22px;
@@ -22,25 +38,10 @@ const MainWrapper = styled.div`
 const SearchInput = styled.input.attrs({ placeholder: "Search" })`
   background-color: transparent;
   border: none;
-  width: 100px;
+  width: 100%;
   :focus {
     outline: none;
   }
   color: ${(props) => props.theme.neutral1};
 `;
-const SearchBar = () => {
-  return (
-    <MainWrapper>
-      <div>
-        <SearchIcon />
-        <SearchInput />
-      </div>
-      <div>
-        <NotificationIcon />
-        <img src={Avatar} />
-      </div>
-    </MainWrapper>
-  );
-};
-
 export default SearchBar;

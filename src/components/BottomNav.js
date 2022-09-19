@@ -1,7 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as DashboardIcon } from "../assets/icons/SideBar-Dash.svg";
-import { ReactComponent as PlusIcon } from "../assets/icons/Dash-PlusIcon.svg";
+import { ReactComponent as AsigneeIcon } from "../assets/icons/Select-Asignee.svg";
+import { Link, useLocation } from "react-router-dom";
+
+const BottomNav = () => {
+  const location = useLocation();
+  return (
+    <MainWrapper>
+      <Options>
+        <Link to={"/"}>
+          <NavOption active={location.pathname === "/"}>
+            <DashboardIcon />
+            <span>Dash</span>
+          </NavOption>
+        </Link>
+        <Link to={"/settings"}>
+          <NavOption active={location.pathname === "/settings"}>
+            <AsigneeIcon />
+            <span>Profile</span>
+          </NavOption>
+        </Link>
+      </Options>
+    </MainWrapper>
+  );
+};
 
 const MainWrapper = styled.div`
   height: 79px;
@@ -20,39 +43,24 @@ const Options = styled.div`
   height: 100%;
   align-items: center;
   justify-content: space-around;
+  a {
+    text-decoration: none;
+  }
 `;
 const NavOption = styled.div`
   display: flex;
   text-align: center;
+  cursor: pointer;
   gap: 5px;
   flex-direction: column;
   font-weight: bold;
   svg {
     margin: 0 auto;
   }
-  :hover,
-  :active {
-    color: ${(props) => props.theme.primary};
-    fill: ${(props) => props.theme.primary};
-  }
-  color: ${(props) => props.theme.neutral1};
-  fill: ${(props) => props.theme.neutral1};
+  fill: ${(props) =>
+    props.active ? props.theme.primary : props.theme.neutral1};
+  color: ${(props) =>
+    props.active ? props.theme.primary : props.theme.neutral1};
 `;
-const BottomNav = () => {
-  return (
-    <MainWrapper>
-      <Options>
-        <NavOption>
-          <DashboardIcon />
-          Dash
-        </NavOption>
-        <NavOption>
-          <PlusIcon />
-          Add
-        </NavOption>
-      </Options>
-    </MainWrapper>
-  );
-};
 
 export default BottomNav;

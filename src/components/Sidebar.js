@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { ReactComponent as RavnLogo } from "../assets/icons/Ravn-Black.svg";
 import { ReactComponent as DashboardIcon } from "../assets/icons/SideBar-Dash.svg";
 import { ReactComponent as TasksIcon } from "../assets/icons/SideBar-Task.svg";
+
+const SideBar = () => {
+  const location = useLocation();
+  return (
+    <MainWrapper>
+      <LogoWrapper>
+        <RavnLogo />
+      </LogoWrapper>
+      <TabList>
+        <Link to={"/"}>
+          <Tab currentTab={location.pathname === "/"}>
+            <DashboardIcon />
+            <span>DASHBOARD</span>
+          </Tab>
+        </Link>
+        <Link to={"/settings"}>
+          <Tab currentTab={location.pathname === "/settings"}>
+            <TasksIcon />
+            <span>SETTINGS</span>
+          </Tab>
+        </Link>
+      </TabList>
+    </MainWrapper>
+  );
+};
 
 const MainWrapper = styled.div`
   border-radius: 24px;
@@ -20,6 +46,9 @@ const LogoWrapper = styled.div`
 `;
 const TabList = styled.div`
   margin-top: 46px;
+  a {
+    text-decoration: none;
+  }
 `;
 const Tab = styled.button`
   padding: 16px 20px;
@@ -43,7 +72,7 @@ const Tab = styled.button`
   flex-direction: row;
   gap: 19px;
   ${(props) => {
-    if (props.tabValue == props.currentTab) {
+    if (props.currentTab) {
       return css`
         background-image: linear-gradient(
           to right,
@@ -57,38 +86,4 @@ const Tab = styled.button`
     }
   }};
 `;
-
-const SideBar = () => {
-  const [activeTab, setActiveTab] = useState(1);
-  return (
-    <MainWrapper>
-      <LogoWrapper>
-        <RavnLogo />
-      </LogoWrapper>
-      <TabList>
-        <Tab
-          onClick={() => {
-            setActiveTab(1);
-          }}
-          currentTab={activeTab}
-          tabValue={1}
-        >
-          <DashboardIcon />
-          <span>DASHBOARD</span>
-        </Tab>
-        <Tab
-          onClick={() => {
-            setActiveTab(2);
-          }}
-          currentTab={activeTab}
-          tabValue={2}
-        >
-          <TasksIcon />
-          <span>MY TASKS</span>
-        </Tab>
-      </TabList>
-    </MainWrapper>
-  );
-};
-
 export default SideBar;

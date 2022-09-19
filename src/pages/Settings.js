@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BottomNav from "../components/BottomNav";
-import Dashboard from "../components/Home/Dashboard";
+import Profile from "../components/Settings/Profile";
 import SearchBar from "../components/SearchBar";
 import SideBar from "../components/SideBar";
 import ThemeLayout from "../layouts/ThemeLayout";
@@ -14,7 +14,7 @@ const Home = () => {
           <SideBar />
           <Container>
             <SearchBar />
-            <Dashboard />
+            <Profile />
           </Container>
         </FlexContainer>
         <BottomNav />
