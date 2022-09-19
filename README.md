@@ -14,57 +14,29 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Project description
+This is a project made with react.js, implementing apollo client and styled components,
+because these technologies work so grea together, and the way you can improve your
+components with dynamic styling is just awesome. I also decided to connect to the 
+backend API using apollo since I never used it before and therefore I wanted
+to take that challenge and the opportunity to learn something new, same thing
+happened with styled components because I did not know how it worked,
+regarding to te folder structure, I looked for best practices and I
+was so doubtful about what style should I choose.
+I learned so much making this test and I am looking fordward to learn more
+This application's functionality is about a task management site, where you can add some 
+tasks in order to keep you workspace organized and clean.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies and Libraries used
+"graphql": "^16.6.0", For querying with apollo client
+"moment": "^2.29.4", Useful for date formatting 
+"react-datepicker": "^4.8.0", Date Picker that Provided a better friendly experience in development
+"@apollo/client": "^3.6.9", Used for querying backend API and storing data in cache
+"styled-components": "^5.3.5", Used for the entire application interface with css
 
-### `npm run build`
+## Screenshots of running application
+![image](https://user-images.githubusercontent.com/37248707/191132981-bac6ddc9-c96c-4b4d-a45c-d33f7c94657f.png)
+![image](https://user-images.githubusercontent.com/37248707/191133034-889a4b08-9233-44c7-b02c-b8abb3a39618.png)
+![image](https://user-images.githubusercontent.com/37248707/191133060-5b574220-f230-48b2-85ed-acce1b111d23.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
