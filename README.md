@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ## Project description
 This is a project made with react.js, implementing apollo client and styled components,
-because these technologies work so grea together, and the way you can improve your
+because these technologies work so great together, and the way you can improve your
 components with dynamic styling is just awesome. I also decided to connect to the 
 backend API using apollo since I never used it before and therefore I wanted
 to take that challenge and the opportunity to learn something new, same thing
